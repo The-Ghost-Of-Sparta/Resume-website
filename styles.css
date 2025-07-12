@@ -770,6 +770,11 @@ body {
 .footer-social {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .linkedin-btn {
@@ -783,12 +788,20 @@ body {
     gap: 0.5rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 180px;
+    justify-content: center;
 }
 
 .linkedin-btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.linkedin-btn i {
+    font-size: 1.2rem;
 }
 
 
@@ -865,11 +878,6 @@ body {
 
     .achievements-grid {
         grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
     }
 }
 
