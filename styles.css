@@ -767,6 +767,30 @@ body {
     font-size: 0.95rem;
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-btn {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
 
 
 /* Responsive Design */
