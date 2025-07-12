@@ -78,25 +78,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+    // Split the text to handle "Devanand Sridhar" as one unit
+    const parts = text.split('<span class="highlight">');
+    if (parts.length > 1) {
+        const beforeHighlight = parts[0];
+        const highlightPart = parts[1].split('</span>')[0];
+        const afterHighlight = parts[1].split('</span>')[1] || '';
+        
+        element.innerHTML = '';
+        let currentIndex = 0;
+        
+        function typePart() {
+            if (currentIndex < beforeHighlight.length) {
+                element.innerHTML += beforeHighlight.charAt(currentIndex);
+                currentIndex++;
+                setTimeout(typePart, speed);
+            } else {
+                // Add the highlight span with the full name
+                element.innerHTML += '<span class="highlight">' + highlightPart + '</span>';
+                // Continue with the rest
+                typeAfterHighlight();
+            }
         }
+        
+        function typeAfterHighlight() {
+            let afterIndex = 0;
+            function typeAfter() {
+                if (afterIndex < afterHighlight.length) {
+                    element.innerHTML += afterHighlight.charAt(afterIndex);
+                    afterIndex++;
+                    setTimeout(typeAfter, speed);
+                }
+            }
+            typeAfter();
+        }
+        
+        typePart();
+    } else {
+        // Fallback for simple text without spans
+        let i = 0;
+        element.innerHTML = '';
+        
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        
+        type();
     }
-    
-    type();
 }
 
 // Initialize typing effect when page loads
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
+        const originalText = heroTitle.innerHTML;
         typeWriter(heroTitle, originalText, 50);
     }
 });
