@@ -72,68 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const subject = this.querySelector('input[placeholder="Subject"]').value;
-        const message = this.querySelector('textarea').value;
-        
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-        
-        // Simulate form submission (replace with actual form handling)
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
-}
 
-// Skill bars animation
-const skillBars = document.querySelectorAll('.skill-progress');
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBar = entry.target;
-            const width = progressBar.style.width;
-            progressBar.style.width = '0%';
-            
-            setTimeout(() => {
-                progressBar.style.width = width;
-            }, 500);
-        }
-    });
-}, { threshold: 0.5 });
 
-skillBars.forEach(bar => {
-    skillObserver.observe(bar);
-});
+
 
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
@@ -230,49 +171,9 @@ if (aboutStats) {
     statsObserver.observe(aboutStats);
 }
 
-// Add hover effects for project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
 
-// Add click to copy functionality for contact information
-document.querySelectorAll('.contact-item p').forEach(contactInfo => {
-    contactInfo.style.cursor = 'pointer';
-    contactInfo.addEventListener('click', function() {
-        const text = this.textContent;
-        navigator.clipboard.writeText(text).then(() => {
-            // Show temporary tooltip
-            const tooltip = document.createElement('div');
-            tooltip.textContent = 'Copied!';
-            tooltip.style.cssText = `
-                position: absolute;
-                background: #2563eb;
-                color: white;
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 12px;
-                z-index: 1000;
-                pointer-events: none;
-            `;
-            
-            const rect = this.getBoundingClientRect();
-            tooltip.style.left = rect.left + 'px';
-            tooltip.style.top = (rect.top - 30) + 'px';
-            
-            document.body.appendChild(tooltip);
-            
-            setTimeout(() => {
-                document.body.removeChild(tooltip);
-            }, 2000);
-        });
-    });
-});
+
+
 
 // Add scroll to top functionality
 const scrollToTopBtn = document.createElement('button');
@@ -341,3 +242,47 @@ const debouncedScrollHandler = debounce(() => {
 }, 16);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+// Experience Slider Functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Show current slide
+    if (slides[index]) {
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+}
+
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    
+    if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+    }
+    
+    showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index - 1;
+    showSlide(currentSlideIndex);
+}
+
+// Auto-advance slides every 5 seconds
+setInterval(() => {
+    changeSlide(1);
+}, 5000);
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+});

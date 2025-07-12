@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devanand - Salesforce Developer Portfolio</title>
+    <title>Devanand - Salesforce Solutions Provider</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Devanand</h2>
+                <h2>Salesforce Solutions Provider</h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -32,10 +32,7 @@
                     <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#projects" class="nav-link">Work Experience</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -51,14 +48,12 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Devanand Sridhar</span></h1>
-                <h2 class="hero-subtitle">Salesforce Developer</h2>
                 <p class="hero-description">
                     Certified Salesforce Developer with proven expertise in developing Apex, Flows, LWC, 
                     and ERP integrations. Skilled in delivering scalable solutions that improve platform 
                     performance and increase business output.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
                     <a href="Devanand_Salesforce_Resume-2.pdf" class="btn btn-secondary" target="_blank">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
@@ -98,7 +93,7 @@
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <h3>2+</h3>
+                            <h3>3+</h3>
                             <p>Years Experience</p>
                         </div>
                         <div class="stat">
@@ -115,7 +110,11 @@
                     <div class="certification-badges">
                         <div class="badge">
                             <i class="fab fa-salesforce"></i>
-                            <span>Platform Developer I & II</span>
+                            <span>Platform Developer I</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fab fa-salesforce"></i>
+                            <span>Platform Developer II</span>
                         </div>
                         <div class="badge">
                             <i class="fas fa-cog"></i>
@@ -135,12 +134,23 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="experience-title">
                         <h3>Salesforce Developer</h3>
                         <h4>Capgemini Technology Services, Chennai</h4>
-                        <p class="timeline-date">Aug 2022 - Present</p>
+                        <p class="experience-date">Aug 2022 - Present</p>
+                    </div>
+                    <div class="experience-logo">
+                        <i class="fas fa-building"></i>
+                    </div>
+                </div>
+                <div class="experience-content">
+                    <p class="experience-description">
+                        Leading Salesforce development initiatives with focus on automation, integration, and scalable solutions.
+                    </p>
+                    <div class="experience-highlights">
+                        <h4>Key Responsibilities & Achievements:</h4>
                         <ul>
                             <li>Developed Apex and Flow-based automation for bank reconciliation and expense approvals</li>
                             <li>Developed Aura components for financial document workflows; transitioning to LWC</li>
@@ -196,197 +206,127 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Salesforce Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Apex</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Lightning Web Components (LWC)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Aura Components</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Visualforce</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-list">
+                        <div class="skill-tag">Apex</div>
+                        <div class="skill-tag">Lightning Web Components (LWC)</div>
+                        <div class="skill-tag">Aura Components</div>
+                        <div class="skill-tag">Visualforce</div>
+                        <div class="skill-tag">SOQL & SOSL</div>
+                        <div class="skill-tag">Triggers & Classes</div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Salesforce Platform Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Flows & Process Builder</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Custom Objects & Fields</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Reports & Dashboards</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Sales Cloud & Service Cloud</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-list">
+                        <div class="skill-tag">Flows & Process Builder</div>
+                        <div class="skill-tag">Custom Objects & Fields</div>
+                        <div class="skill-tag">Reports & Dashboards</div>
+                        <div class="skill-tag">Sales Cloud & Service Cloud</div>
+                        <div class="skill-tag">Validation Rules</div>
+                        <div class="skill-tag">Workflow Rules</div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Integration & Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Conga Composer & DocuSign</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Informatica Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>GitHub & Change Sets</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Data Loader & Debug Logs</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-list">
+                        <div class="skill-tag">Conga Composer & DocuSign</div>
+                        <div class="skill-tag">Informatica Integration</div>
+                        <div class="skill-tag">Change Sets</div>
+                        <div class="skill-tag">Data Loader & Debug Logs</div>
+                        <div class="skill-tag">REST & SOAP APIs</div>
+                        <div class="skill-tag">Platform Events</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Professional Work Experience Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Bank Reconciliation Automation</h3>
-                        <p>Developed Apex and Flow-based automation for bank reconciliation and expense approvals, improving business resilience and reducing processing errors.</p>
-                        <div class="project-tech">
-                            <span>Apex</span>
-                            <span>Flows</span>
-                            <span>Automation</span>
+            <h2 class="section-title">Professional Work Experience</h2>
+            <div class="experience-slider">
+                <div class="slider-container">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h3>Bank Reconciliation & Expense Automation</h3>
+                            <p>Developed Apex and Flow-based automation for bank reconciliation and expense approvals, improving business resilience and reducing processing errors.</p>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-file-contract"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Financial Document Workflows</h3>
-                        <p>Developed Aura components for financial document workflows and transitioning to LWC for improved performance and maintainability.</p>
-                        <div class="project-tech">
-                            <span>Aura</span>
-                            <span>LWC</span>
-                            <span>DocuSign</span>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Financial Document Workflows</h3>
+                            <p>Developed Aura components for financial document workflows; transitioning components to LWC.</p>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>ERP Integration Pipeline</h3>
-                        <p>Designed and integrated Informatica-based pipelines for secure, scalable data exchange between Salesforce and Certinia ERP modules.</p>
-                        <div class="project-tech">
-                            <span>Informatica</span>
-                            <span>ERP</span>
-                            <span>Integration</span>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Integration Pipeline</h3>
+                            <p>Designed and integrated Informatica-based pipelines for secure, scalable data exchange.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>devanand071@gmail.com</p>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>ERP System Enhancement</h3>
+                            <p>Enhanced Certinia ERP modules for improved system uptime and scalability.</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 6379961214</p>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Contract Management Framework</h3>
+                            <p>Built custom object frameworks to enhance contract and agreement management.</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Chennai, India</p>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Stakeholder Collaboration</h3>
+                            <p>Collaborated with multiple stakeholders to gather requirements and lead production change deployment efforts.</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/devanand-sridhar</p>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h3>Document Automation</h3>
+                            <p>Implemented Conga Composer and DocuSign integrations for automated document handling.</p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                    </div>
+                    <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -396,11 +336,27 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Devanand. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="footer-info">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>devanand071@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 6379961214</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/devanand-sridhar/" class="linkedin-btn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        Connect on LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
