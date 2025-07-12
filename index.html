@@ -203,39 +203,61 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Salesforce Development</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">Apex</div>
-                        <div class="skill-tag">Lightning Web Components (LWC)</div>
-                        <div class="skill-tag">Aura Components</div>
-                        <div class="skill-tag">Visualforce</div>
-                        <div class="skill-tag">SOQL & SOSL</div>
-                        <div class="skill-tag">Triggers & Classes</div>
+            <div class="skills-slider">
+                <div class="skills-container">
+                    <div class="skill-slide active">
+                        <div class="skill-slide-content">
+                            <div class="skill-slide-icon">
+                                <i class="fab fa-salesforce"></i>
+                            </div>
+                            <h3>Salesforce Development</h3>
+                            <div class="skill-tags">
+                                <div class="skill-tag">Apex</div>
+                                <div class="skill-tag">Lightning Web Components (LWC)</div>
+                                <div class="skill-tag">Aura Components</div>
+                                <div class="skill-tag">Visualforce</div>
+                                <div class="skill-tag">SOQL & SOSL</div>
+                                <div class="skill-tag">Triggers & Classes</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-slide">
+                        <div class="skill-slide-content">
+                            <div class="skill-slide-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Salesforce Platform Tools</h3>
+                            <div class="skill-tags">
+                                <div class="skill-tag">Flows & Process Builder</div>
+                                <div class="skill-tag">Custom Objects & Fields</div>
+                                <div class="skill-tag">Reports & Dashboards</div>
+                                <div class="skill-tag">Sales Cloud & Service Cloud</div>
+                                <div class="skill-tag">Validation Rules</div>
+                                <div class="skill-tag">Workflow Rules</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-slide">
+                        <div class="skill-slide-content">
+                            <div class="skill-slide-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3>Integration & Tools</h3>
+                            <div class="skill-tags">
+                                <div class="skill-tag">Conga Composer & DocuSign</div>
+                                <div class="skill-tag">Informatica Integration</div>
+                                <div class="skill-tag">Change Sets</div>
+                                <div class="skill-tag">Data Loader & Debug Logs</div>
+                                <div class="skill-tag">REST & SOAP APIs</div>
+                                <div class="skill-tag">Platform Events</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Salesforce Platform Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">Flows & Process Builder</div>
-                        <div class="skill-tag">Custom Objects & Fields</div>
-                        <div class="skill-tag">Reports & Dashboards</div>
-                        <div class="skill-tag">Sales Cloud & Service Cloud</div>
-                        <div class="skill-tag">Validation Rules</div>
-                        <div class="skill-tag">Workflow Rules</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Integration & Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-tag">Conga Composer & DocuSign</div>
-                        <div class="skill-tag">Informatica Integration</div>
-                        <div class="skill-tag">Change Sets</div>
-                        <div class="skill-tag">Data Loader & Debug Logs</div>
-                        <div class="skill-tag">REST & SOAP APIs</div>
-                        <div class="skill-tag">Platform Events</div>
-                    </div>
+                <div class="skills-dots">
+                    <span class="skill-dot active" onclick="currentSkillSlide(1)"></span>
+                    <span class="skill-dot" onclick="currentSkillSlide(2)"></span>
+                    <span class="skill-dot" onclick="currentSkillSlide(3)"></span>
                 </div>
             </div>
         </div>
@@ -245,88 +267,55 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Professional Work Experience</h2>
-            <div class="experience-slider">
-                <div class="slider-container">
-                    <div class="slide active">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <h3>Bank Reconciliation & Expense Automation</h3>
-                            <p>Developed Apex and Flow-based automation for bank reconciliation and expense approvals, improving business resilience and reducing processing errors.</p>
-                        </div>
+            <div class="work-experience-grid">
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-university"></i>
                     </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                            <h3>Financial Document Workflows</h3>
-                            <p>Developed Aura components for financial document workflows; transitioning components to LWC.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3>Data Integration Pipeline</h3>
-                            <p>Designed and integrated Informatica-based pipelines for secure, scalable data exchange.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>ERP System Enhancement</h3>
-                            <p>Enhanced Certinia ERP modules for improved system uptime and scalability.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3>Contract Management Framework</h3>
-                            <p>Built custom object frameworks to enhance contract and agreement management.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Stakeholder Collaboration</h3>
-                            <p>Collaborated with multiple stakeholders to gather requirements and lead production change deployment efforts.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide-content">
-                            <div class="slide-icon">
-                                <i class="fas fa-file-signature"></i>
-                            </div>
-                            <h3>Document Automation</h3>
-                            <p>Implemented Conga Composer and DocuSign integrations for automated document handling.</p>
-                        </div>
-                    </div>
+                    <h3>Bank Reconciliation & Expense Automation</h3>
+                    <p>Developed Apex and Flow-based automation for bank reconciliation and expense approvals, improving business resilience and reducing processing errors.</p>
                 </div>
-                <div class="slider-controls">
-                    <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="slider-dots">
-                        <span class="dot active" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-                        <span class="dot" onclick="currentSlide(7)"></span>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <button class="slider-btn next-btn" onclick="changeSlide(1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                    <h3>Financial Document Workflows</h3>
+                    <p>Developed Aura components for financial document workflows; transitioning components to LWC.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Integration Pipeline</h3>
+                    <p>Designed and integrated Informatica-based pipelines for secure, scalable data exchange.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>ERP System Enhancement</h3>
+                    <p>Enhanced Certinia ERP modules for improved system uptime and scalability.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Contract Management Framework</h3>
+                    <p>Built custom object frameworks to enhance contract and agreement management.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Stakeholder Collaboration</h3>
+                    <p>Collaborated with multiple stakeholders to gather requirements and lead production change deployment efforts.</p>
+                </div>
+                <div class="work-item">
+                    <div class="work-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Document Automation</h3>
+                    <p>Implemented Conga Composer and DocuSign integrations for automated document handling.</p>
                 </div>
             </div>
         </div>
@@ -351,12 +340,6 @@
                             <span>Chennai, India</span>
                         </div>
                     </div>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/devanand-sridhar/" class="linkedin-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        Connect on LinkedIn
-                    </a>
                 </div>
             </div>
         </div>

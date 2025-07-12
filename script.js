@@ -243,46 +243,35 @@ const debouncedScrollHandler = debounce(() => {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
-// Experience Slider Functionality
-let currentSlideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
+// Skills Slider Functionality
+let currentSkillSlideIndex = 0;
+const skillSlides = document.querySelectorAll('.skill-slide');
+const skillDots = document.querySelectorAll('.skill-dot');
 
-function showSlide(index) {
+function showSkillSlide(index) {
     // Hide all slides
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+    skillSlides.forEach(slide => slide.classList.remove('active'));
+    skillDots.forEach(dot => dot.classList.remove('active'));
     
     // Show current slide
-    if (slides[index]) {
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
+    if (skillSlides[index]) {
+        skillSlides[index].classList.add('active');
+        skillDots[index].classList.add('active');
     }
 }
 
-function changeSlide(direction) {
-    currentSlideIndex += direction;
-    
-    if (currentSlideIndex >= slides.length) {
-        currentSlideIndex = 0;
-    } else if (currentSlideIndex < 0) {
-        currentSlideIndex = slides.length - 1;
-    }
-    
-    showSlide(currentSlideIndex);
+function currentSkillSlide(index) {
+    currentSkillSlideIndex = index - 1;
+    showSkillSlide(currentSkillSlideIndex);
 }
 
-function currentSlide(index) {
-    currentSlideIndex = index - 1;
-    showSlide(currentSlideIndex);
-}
-
-// Auto-advance slides every 5 seconds
+// Auto-advance skill slides every 5 seconds
 setInterval(() => {
-    changeSlide(1);
+    currentSkillSlideIndex = (currentSkillSlideIndex + 1) % skillSlides.length;
+    showSkillSlide(currentSkillSlideIndex);
 }, 5000);
 
-// Initialize slider
+// Initialize skills slider
 document.addEventListener('DOMContentLoaded', () => {
-    showSlide(0);
+    showSkillSlide(0);
 });
