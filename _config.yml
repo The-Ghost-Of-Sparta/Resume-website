@@ -1,1 +1,45 @@
-theme: jekyll-theme-cayman
+# Jekyll configuration for portfolio website
+title: Devanand - Salesforce Developer Portfolio
+description: Professional portfolio showcasing Salesforce development and consulting expertise
+author: Devanand
+email: devanand@example.com
+
+# Disable Jekyll theme to use custom HTML
+theme: null
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
